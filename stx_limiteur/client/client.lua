@@ -158,26 +158,26 @@ local SaaytexMenu = {
     Events = {
         onSelected = function(self, _, btn, PMenu, menuData, currentButton, currentSlt, result)
             ------------------------------------------------------------------------------------
-            if btn.name == "~g~Activé le limiteur" then
+            if btn.name == "~g~Activer le limiteur" then
                 local ped = PlayerPedId()
                 local pedVehicle = GetVehiclePedIsIn(ped, false)
                 local vehicleSpeed = math.ceil(GetEntitySpeed(pedVehicle) * 3.6)
                 Notify("Limiteur activé :~o~ "..vehicleSpeed.." KMH")
                 regulateur = vehicleSpeed
             ------------------------------------------------------------------------------------
-            elseif btn.name == "Augmenté de 5 KMH" and regulateur > 6000 or regulateur < 0 then
-                Notify("Il faut tout d'abord                  \"~g~Activé le limiteur~s~\"")
-            elseif btn.name == "Augmenté de 5 KMH" and regulateur < 6000 and regulateur > 0 then
+            elseif btn.name == "Augmenter de 5 KMH" and regulateur > 6000 or regulateur < 0 then
+                Notify("Il faut tout d'abord                  \"~g~Activer le limiteur~s~\"")
+            elseif btn.name == "Augmenter de 5 KMH" and regulateur < 6000 and regulateur > 0 then
                 regulateur = regulateur + 5
                 Notify("Limiteur :~g~ "..regulateur.." KMH")
             ------------------------------------------------------------------------------------
-            elseif btn.name == "Baissé de 5 KMH" and regulateur > 6000 or regulateur < 0 then
-                Notify("Il faut tout d'abord                  \"~g~Activé le limiteur~s~\"")
-            elseif btn.name == "Baissé de 5 KMH" and regulateur < 6000 and regulateur > 0 then
+            elseif btn.name == "Baisser de 5 KMH" and regulateur > 6000 or regulateur < 0 then
+                Notify("Il faut tout d'abord                  \"~g~Activer le limiteur~s~\"")
+            elseif btn.name == "Baisser de 5 KMH" and regulateur < 6000 and regulateur > 0 then
                 regulateur = regulateur - 5
                 Notify("Limiteur :~r~ "..regulateur.." KMH")
             ------------------------------------------------------------------------------------
-            elseif btn.name == "~r~Désactivé Limiteur" then
+            elseif btn.name == "~r~Désactiver Limiteur" then
                 regulateur = 600000
                 Notify("~r~Limiteur désactivé !")
             end
@@ -188,10 +188,10 @@ local SaaytexMenu = {
     Menu = {
         ["Menu Limiteur :"] = {
             b = {
-                {name = "~g~Activé le limiteur", ask = "→→→", askX = true},
-                {name = "Augmenté de 5 KMH", ask = "→→→", askX = true},
-                {name = "Baissé de 5 KMH", ask = "→→→", askX = true},
-                {name = "~r~Désactivé Limiteur", ask = "→→→", askX = true},
+                {name = "~g~Activer le limiteur", ask = "→→→", askX = true},
+                {name = "Augmenter de 5 KMH", ask = "→→→", askX = true},
+                {name = "Baisser de 5 KMH", ask = "→→→", askX = true},
+                {name = "~r~Désactiver Limiteur", ask = "→→→", askX = true},
             }
         },
     }
