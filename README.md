@@ -1,6 +1,8 @@
 # stx_limiteur
 It's a vehicle speed limiter. I relied on cv_control then I changed it a lot. Limiteur de vitesse, Fivem, Régulateur
 
+Misspellings have been solved.
+
 PREVIEWS :
 
 - Menu
