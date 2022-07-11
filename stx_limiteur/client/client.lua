@@ -60,49 +60,9 @@ function speedo(vit)
 end
 end
 
-----------------------------------------------------------------------------------
----------------------------------------TEST---------------------------------------
-----------------------------------------------------------------------------------
-
---Citizen.CreateThread(function()
---  while true do
---    Citizen.Wait(0)
---    if IsControlJustPressed(1, 168) and IsPedInAnyVehicle(GetPlayerPed(-1)) then
---      ouvert = false
---      local ped = PlayerPedId()
---      local pedVehicle = GetVehiclePedIsIn(ped, false)
---      local vehicleSpeed = math.ceil(GetEntitySpeed(pedVehicle) * 3.6)
---      regulateur = vehicleSpeed
---      Notify("Limiteur :~r~ "..regulateur .."KMH         Ralentissé !")
---    if regulateur < 60 then
---      regulateur = 60
---      Notify("Impossible de baissé la vitesse en dessous de ~r~60 KMH")
---    elseif IsControlJustPressed(1, 168) and ouvert == false then
---    Notify("désactivé")
---    ouvert = true
---    end
---    end
---    end
---end)
-
-
---Citizen.CreateThread(function()
---  while true do
---    Citizen.Wait(0)
---    if IsControlJustPressed(1, 167) and  IsPedInAnyVehicle(GetPlayerPed(-1)) then
---      local ped = PlayerPedId()
---      local pedVehicle = GetVehiclePedIsIn(ped, false)
---      local vehicleSpeed = math.ceil(GetEntitySpeed(pedVehicle) * 3.6)
---      regulateur = vehicleSpeed +5
---      Notify("Limiteur :~g~ "..regulateur .."KMH")
---    end
---    end
---end)
-----------------------------------------------------------------------------------
-----------------------------------------------------------------------------------
 
 if toucheslimiteur == true then
---------------------------------------- Activé le Limiteur
+--------------------------------------- Activer le Limiteur
 Citizen.CreateThread(function()
   while true do
     Citizen.Wait(0)
@@ -118,7 +78,7 @@ Citizen.CreateThread(function()
   end
 end)
 
---------------------------------------- Désactivé le Limiteur
+--------------------------------------- Désactiver le Limiteur
 Citizen.CreateThread(function()
   while true do
     Citizen.Wait(0)
