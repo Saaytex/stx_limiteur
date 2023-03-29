@@ -170,3 +170,15 @@ Citizen.CreateThread(function()
 end)
 
 end
+
+
+
+
+
+
+
+---------------------------------------------------------
+------------ Créateur : Mehdi - Saaytex#8176 ------------
+-------- Discord : https://discord.gg/reJ8V49A4f --------
+------------- Par respect ne pas supprimer --------------
+---------------------------------------------------------
